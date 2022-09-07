@@ -37,6 +37,11 @@ function picker_m.habitats_browser(opts)
       map("n", "d", _actions.delete_habitat)
       map("n", "r", _actions.rename_habitat)
 
+      map("i", "<C-o>", _actions.open_habitat)
+      map("i", "<C-a>", _actions.add_habitat)
+      map("i", "<C-d>", _actions.delete_habitat)
+      map("i", "<C-r>", _actions.rename_habitat)
+
       actions.select_default:replace(function()
         _actions.open_habitat(prompt_bufnr)
       end)
